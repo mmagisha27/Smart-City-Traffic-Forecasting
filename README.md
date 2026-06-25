@@ -1,8 +1,10 @@
-# Smart City Traffic Forecasting
+# Smart City Traffic Forecasting and Traffic Monitoring Dashboard
 
 ## Project Overview
 
 This project focuses on predicting traffic volume in a smart city using Machine Learning techniques and historical traffic data. The objective is to analyze traffic patterns across different city junctions and forecast future traffic conditions to support better traffic management and urban planning.
+
+In addition to traffic forecasting, an interactive dashboard and visualization system have been developed to provide a more practical and user-friendly traffic monitoring solution.
 
 ## Dataset
 
@@ -23,6 +25,8 @@ The dataset contains:
 * Build a machine learning model for traffic forecasting.
 * Evaluate model performance using error metrics.
 * Generate future traffic predictions.
+* Develop an interactive dashboard for traffic prediction.
+* Visualize traffic density patterns using heatmaps.
 
 ## Technologies Used
 
@@ -30,7 +34,9 @@ The dataset contains:
 * Pandas
 * NumPy
 * Matplotlib
+* Seaborn
 * Scikit-Learn
+* Streamlit
 * Google Colab
 
 ## Methodology
@@ -39,9 +45,33 @@ The dataset contains:
 2. Data Cleaning and Preprocessing
 3. Feature Engineering
 4. Exploratory Data Analysis (EDA)
-5. Model Training using Random Forest Regressor
-6. Performance Evaluation using Mean Absolute Error (MAE)
-7. Traffic Prediction Generation
+5. Traffic Pattern Visualization
+6. Model Training using Random Forest Regressor
+7. Performance Evaluation using Mean Absolute Error (MAE)
+8. Traffic Prediction Generation
+9. Dashboard Development using Streamlit
+
+## Additional Features Implemented
+
+### Traffic Density Heatmap
+
+A heatmap was developed to visualize average traffic volume across different junctions and hours of the day. This helps identify peak traffic periods and high-density traffic zones.
+
+### Interactive Traffic Forecasting Dashboard
+
+A Streamlit-based dashboard was developed to allow users to:
+
+* Select Year
+* Select Month
+* Select Day
+* Select Hour
+* Select Junction
+
+The dashboard generates real-time traffic predictions based on user inputs.
+
+### Optimized Model Deployment
+
+A lightweight optimized machine learning model (`traffic_model_small.pkl`) was created for efficient deployment and faster prediction generation.
 
 ## Results
 
@@ -55,28 +85,40 @@ The model successfully learned traffic patterns and produced accurate traffic fo
 
 * Traffic_Forecasting.ipynb
 * traffic_predictions.csv
+* traffic_model_small.pkl
+* heatmap.png
+* dashboard.png
 * README.md
+
+## Dashboard Preview
+
+The project includes an interactive traffic forecasting dashboard developed using Streamlit. Users can provide traffic-related inputs and receive predicted traffic volume instantly.
 
 ## Future Scope
 
 * Implement advanced forecasting models such as XGBoost and LSTM.
-* Develop a web dashboard for real-time traffic prediction.
-* Integrate live traffic data for dynamic forecasting.
+* Integrate real-time traffic feeds from IoT devices and sensors.
+* Develop traffic congestion alert systems.
+* Enable route optimization and smart signal control.
+* Deploy the dashboard on cloud platforms for public access.
 
 ## Conclusion
 
-This project demonstrates the application of machine learning techniques for smart city traffic forecasting. The developed model can assist city authorities in traffic planning, congestion management, and infrastructure development.
+This project demonstrates the application of machine learning techniques for smart city traffic forecasting. The developed forecasting model, visualization system, and interactive dashboard can assist city authorities in traffic planning, congestion management, and infrastructure development.
 
 ## Note
 
-The trained model file (`traffic_model.pkl`) is not included in this repository because its size exceeds GitHub's recommended file upload limits.
+The original trained model file exceeded GitHub's recommended upload size limits. Therefore, an optimized lightweight model (`traffic_model_small.pkl`) has been included for deployment and demonstration purposes.
 
-The model can be recreated by running the `Traffic_Forecasting.ipynb` notebook from start to finish. All preprocessing, feature engineering, model training, and prediction steps are included in the notebook.
+All preprocessing, feature engineering, model training, visualization, and prediction generation steps are available in the notebook.
 
 Repository Contents:
 
 * Traffic_Forecasting.ipynb
 * traffic_predictions.csv
+* traffic_model_small.pkl
+* heatmap.png
+* dashboard.png
 * README.md
 
 Model Used:
@@ -86,5 +128,3 @@ Model Used:
 Performance:
 
 * Mean Absolute Error (MAE): 2.864
-
-
